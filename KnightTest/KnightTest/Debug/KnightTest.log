@@ -1,4 +1,7 @@
 ﻿  KnightTest.cpp
-c:\users\elwin\documents\visual studio 2015\projects\knighttest\knighttest\knighttest.cpp(23): warning C4018: '<': signed/unsigned mismatch
-  KnightTest.vcxproj -> c:\users\elwin\documents\visual studio 2015\Projects\KnightTest\Debug\KnightTest.exe
-  KnightTest.vcxproj -> c:\users\elwin\documents\visual studio 2015\Projects\KnightTest\Debug\KnightTest.pdb (Full PDB)
+  Generating Code...
+  Compiling...
+  Board.cpp
+  Generating Code...
+  KnightTest.vcxproj -> D:\GT\Knights_Tour\KnightTest\Debug\KnightTest.exe
+  KnightTest.vcxproj -> D:\GT\Knights_Tour\KnightTest\Debug\KnightTest.pdb (Full PDB)
