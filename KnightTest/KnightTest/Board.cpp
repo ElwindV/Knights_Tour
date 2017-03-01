@@ -13,7 +13,7 @@ string Board::Grid(void)
 	for (int i = 0; i < boardSize * boardSize; i++)
 	{
 		if (i % boardSize == 0) board += LN;
-		board += (i == knight) ? KNIGHT_TILE : EMPTY_TILE;
+		board += (i == *knight) ? KNIGHT_TILE : (field[i] != 0) ? VISITED_TILE : EMPTY_TILE;
 	}
 	return board + LN;
 }
@@ -21,6 +21,16 @@ string Board::Grid(void)
 void Board::Draw(void)
 {
 	cout << Grid();
+}
+
+void Board::SetKnight(int *position) 
+{
+	knight = position;
+}
+
+void Board::SetField(int *param[])
+{
+	field = *param;
 }
 
 

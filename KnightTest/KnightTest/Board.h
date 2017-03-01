@@ -6,12 +6,15 @@ class Board
 public:
 	Board(int);
 	void Draw(void);
+	void SetKnight(int*);
+	void SetField(int*[]);
 
 private:
 	string Grid(void);
 
 	int boardSize = 5;
-	int knight = 0;
+	int *knight;
+	int *field;
 
 	const string EMPTY_TILE = "[ ]";
 	const string KNIGHT_TILE = "[X]";

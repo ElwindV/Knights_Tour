@@ -12,39 +12,25 @@ typedef float float32;
 class Vector2
 {
 public:
-	//MEMBERS
-	float32 x;
-	float32 y;
+	int x;
+	int y;
 
-	//CONSTRUCTORS
 	Vector2(void);
-	Vector2(float32 xValue, float32 yValue);
+	Vector2(int xValue, int yValue);
 	Vector2(const Vector2 & v);
 	Vector2(const Vector2 * v);
 
-	//DECONSTRUCTOR
 	~Vector2(void);
 
-	//METHODS
-	void Set(float32 xValue, float32 yValue);
-
-	float32 Length() const;
-	float32 LengthSquared() const;
-	float32 Distance(const Vector2 & v) const;
-	float32 DistanceSquared(const Vector2 & v) const;
-	float32 Dot(const Vector2 & v) const;
-	float32 Cross(const Vector2 & v) const;
-
-	Vector2 & Normal();
-	Vector2 & Normalize();
+	void Set(int xValue, int yValue);
 
 	//ASSINGMENT AND EQUALITY OPERATIONS
 	inline Vector2 & Vector2::operator = (const Vector2 & v) { x = v.x; y = v.y; return *this; }
-	inline Vector2 & Vector2::operator = (const float32 & f) { x = f; y = f; return *this; }
+	inline Vector2 & Vector2::operator = (const int & f) { x = f; y = f; return *this; }
 	inline Vector2 & Vector2::operator - (void) { x = -x; y = -y; return *this; }
 	inline bool Vector2::operator == (const Vector2 & v) const { return (x == v.x) && (y == v.y); }
 	inline bool Vector2::operator != (const Vector2 & v) const { return (x != v.x) || (y != v.y); }
-
+	
 	//VECTOR2 TO VECTOR2 OPERATIONS
 	inline const Vector2 Vector2::operator + (const Vector2 & v) const { return Vector2(x + v.x, y + v.y); }
 	inline const Vector2 Vector2::operator - (const Vector2 & v) const { return Vector2(x - v.x, y - v.y); }
@@ -58,16 +44,17 @@ public:
 	inline Vector2 & Vector2::operator /= (const Vector2 & v) { x /= v.x; y /= v.y; return *this; }
 
 	//SCALER TO VECTOR2 OPERATIONS
-	inline const Vector2 Vector2::operator + (float32 v) const { return Vector2(x + v, y + v); }
-	inline const Vector2 Vector2::operator - (float32 v) const { return Vector2(x - v, y - v); }
-	inline const Vector2 Vector2::operator * (float32 v) const { return Vector2(x * v, y * v); }
-	inline const Vector2 Vector2::operator / (float32 v) const { return Vector2(x / v, y / v); }
+	inline const Vector2 Vector2::operator + (int v) const { return Vector2(x + v, y + v); }
+	inline const Vector2 Vector2::operator - (int v) const { return Vector2(x - v, y - v); }
+	inline const Vector2 Vector2::operator * (int v) const { return Vector2(x * v, y * v); }
+	inline const Vector2 Vector2::operator / (int v) const { return Vector2(x / v, y / v); }
 
 	//SCALER TO THIS OPERATIONS
-	inline Vector2 & Vector2::operator += (float32 v) { x += v; y += v; return *this; }
-	inline Vector2 & Vector2::operator -= (float32 v) { x -= v; y -= v; return *this; }
-	inline Vector2 & Vector2::operator *= (float32 v) { x *= v; y *= v; return *this; }
-	inline Vector2 & Vector2::operator /= (float32 v) { x /= v; y /= v; return *this; }
+	inline Vector2 & Vector2::operator += (int v) { x += v; y += v; return *this; }
+	inline Vector2 & Vector2::operator -= (int v) { x -= v; y -= v; return *this; }
+	inline Vector2 & Vector2::operator *= (int v) { x *= v; y *= v; return *this; }
+	inline Vector2 & Vector2::operator /= (int v) { x /= v; y /= v; return *this; }
+
 };
 
 #endif
